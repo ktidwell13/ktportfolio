@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;400;500;600;700&family=Inter:wght@200;400;600;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #212121;
+    height: 100;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Fonts Mobile */
+
+h3{
+    font-size: 32px;
+    font-weight: 800;
+    font-family: "Exo 2", sans-serif;
+    margin-left: 32px;
+    margin-top: 80px;
+    background: linear-gradient(90.07deg, #247DFB 1.22%, #A25AFF 20.64%, #E64D60 30.49%, #FFAB19 50.88%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+p{
+    font-size: 14px;
+    font-weight: 200;
+    font-family: "Inter", sans-serif;
+    color: whitesmoke;
+    margin-left: 32px;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    width:80%;
+    line-height: 20px;
+}
+
+.description{
+    font-size: 14px;
+
+}
+
+/* Buttons */
+button{
+    width: 160px;
+    height: 40px;
+    border-radius: 100px;
+    border: none;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 100px;
+    letter-spacing: .1em;
+    margin-top: 16px;
+}
+.mobile-channel-btn{
+    display: block;
+    width: 150px;
+    height: 40px;
+    background: linear-gradient(90deg, #096CFA 0%, #AA41F4 33.96%, #E24B63 65.22%, #FFAB19 100.26%);
+    border-radius: 100px;
+    border: none;
+    margin-top: 0px;
+    margin-left: 32px;
+    color: whitesmoke;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    font-weight: 100px;
+    letter-spacing: .1em;
+}
+.channel-btn{
+    display: none;
+}
+/* Nav Bar Mobile */
+
+nav{
+    display: flex;
+    width: 100%;
+    margin-left: auto;
+    padding-right: 1rem;
+}
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: flex-end;
+    justify-items: right;
+    justify-items: end;
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    
+}
+
+li{
+    margin: 0 2rem;
+}
+li a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+.banner{
+    width: 100%;
+    margin-top: 100px;
+}
+
+/* Projects */
+
+.project-grid{
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: auto;
+    gap: 1rem 2rem;
+    margin: 0 auto;
+}
+.project-grid img{
+    width: 100%;
+    margin-left: 2rem;
+}
+
+/* Buttons */
+
+.channel-btn{
+    width: 150px;
+    height: 40px;
+    background: linear-gradient(90deg, #096CFA 0%, #AA41F4 33.96%, #E24B63 65.22%, #FFAB19 100.26%);
+    border-radius: 100px;
+    border: none;
+    margin-top: 0px;
+    margin-left: 32px;
+    color: whitesmoke;
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    font-weight: 100px;
+    letter-spacing: .1em;
+}
+
+/* Footer */
+
+hr{
+    margin-top: 2rem;
+    margin-bottom: 16px;
+    border-top: 1px solid white;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+.logo{
+    width: 8%;
+    float: left;
+    margin-top: 8px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+    font-size: 6px;
+}
+
+li{
+    margin: 0 1rem;
+}
+footer{
+    margin-top: 0px;
+}
+
+.pages{
+    float: right;
+}
+.socials{
+    float: right;
+    display: flex;
+    margin-top: 16px;
+    margin-right: 16px;
+    width: 0px;
+}
+.linkedin,.instagram,.dribbble,.youtube{
+    width: 24px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.youtube-thumbnail{
+    width: 75%;
+    margin-left: 32px;
+    margin-bottom: 32px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    /* .cha-ching, .cryptocation, .instacare, .nft, .whiskey{
+        margin-left: 32px;
+        margin-right: 16px;
+        width: 100%;
+        height:100%;
+    }     */
+    
+    .project-grid{
+        display: grid;
+        width: 100%;
+        gap:16px;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: auto;
+        }
+
+
+/* Fonts Tablet */
+h3{
+    font-size: 32px;
+    font-weight: 800;
+    font-family: "Exo 2", sans-serif;
+    margin-left: 32px;
+    margin-top: 60px;
+    background: linear-gradient(90.07deg, #247DFB 1.22%, #A25AFF 15.64%, #E64D60 30.49%, #FFAB19 40.88%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.description{
+    width: 70%;
+}
+
+/* Footer Tablet */
+
+hr{
+    margin-top: 3rem;
+    margin-bottom: 24px;
+    border-top: 1px solid white;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+li{
+    margin: 0 1rem;
+    margin-top: 10px;
+}
+footer{
+    margin-top: 0px;
+}
+
+.pages{
+    float: right;
+}
+.socials{
+    float: right;
+    display: flex;
+    margin-top: 16px;
+    margin-right: 16px;
+    width: 0px;
+}
+.linkedin,.instagram,.dribbble,.youtube{
+    width: 32px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.youtube-thumbnail{
+    width: 50%;
+    margin-left: 32px;
+    margin-bottom: 32px;
+}
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 769px){
+    h3{
+        font-size: 40px;
+        font-weight: 800;
+        font-family: "Exo 2", sans-serif;
+        margin-left: 32px;
+        margin-top: 80px;
+        background: linear-gradient(90.07deg, #247DFB 1.22%, #A25AFF 5.64%, #E64D60 15.49%, #FFAB19 20.88%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .description{
+        width: 70%;
+    }
+    .cha-ching, .whiskey, .fortune, .cryptocation, .instacare{
+       
+        width: 100%;
+       
+    }   
+    
+    .project-grid{
+        display: grid;
+        
+        gap: 1rem;
+        grid-template-columns: 30% 30% 30% ;
+        grid-template-rows: auto;
+        }
+        
+        .container{
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .container-content{
+            width: 65%;
+        }
+        .mobile-channel-btn{
+            display: none;
+        }
+        .channel-btn{
+            display: block;
+        }
+        .youtube-thumbnail{
+            width: 80%;
+            margin-right: 80px;
+            margin-bottom: 32px;
+            margin-top: 80px;
+        }
+
+
+
+
+        /* DESKTOP FOOTER */
+/* FOOTER Desktop */
+.footer-container{
+    margin-top: 40px;
+    display: flex;
+    padding-bottom: 1rem;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.mobile{
+    display: none;
+}
+.hidden{
+    display: block;
+}
+.reverse{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.social-footer-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pages{
+   display: flex; 
+   font-family: Inter;
+   font-weight: 200;
+   margin-top: -1rem;
+   
+margin-right: 1.5rem;
+
+list-style: none;
+
+flex-direction: column;
+}
+.pages li{
+    margin: 8px;
+}
+.footer-social-box{
+    
+    justify-content: center;
+    align-items: center;
+}
+.socials-list{
+    display: flex;
+    list-style: none;
+ 
+    
+    
+} 
+.socials-list li{
+    margin: 12px;
+}
+.linkedin, .youtube, .dribbble, .instagram{
+    width: 40px;
+    height: 40px;
+}
+}
