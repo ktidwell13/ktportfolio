@@ -7,11 +7,20 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+    width: 0px;
+  }
+  
+
 body{
     background-color: #212121;
     height: 100;
     width: 100%;
     overflow-x: hidden;
+}
+
+ul{
+    list-style: none;
 }
 
 /* Fonts Mobile */
@@ -39,11 +48,30 @@ p{
     width:80%;
     line-height: 20px;
 }
+.subtitle{
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
 
 .description{
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 2rem;
 
 }
+/* *** LINKS *** */
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+a:hover{
+    border-bottom: 1px solid white;
+}
+.logo-link:hover{
+    border-bottom: none;
+  }
+  .no-link:hover{
+    border-bottom: none;
+  }
 
 /* Buttons */
 button{
@@ -64,8 +92,8 @@ button{
     background: linear-gradient(90deg, #096CFA 0%, #AA41F4 33.96%, #E24B63 65.22%, #FFAB19 100.26%);
     border-radius: 100px;
     border: none;
-    margin-top: 0px;
-    margin-left: 32px;
+    margin-top: 1rem;
+    margin-left: 11rem;
     color: whitesmoke;
     font-size: 12px;
     font-family: "Inter", sans-serif;
@@ -75,40 +103,87 @@ button{
 .channel-btn{
     display: none;
 }
-/* Nav Bar Mobile */
-
-nav{
+/* NavBar */
+header{
     display: flex;
     width: 100%;
-    margin-left: auto;
-    padding-right: 1rem;
+    justify-content: space-between;
 }
-ul{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    justify-content: flex-end;
-    justify-items: right;
-    justify-items: end;
-    font-family: "Inter", sans-serif;
+.desktop-nav{
+    font-family: Inter;
     font-weight: 100;
-    font-size: 12px;
-    
-}
-
-li{
-    margin: 0 2rem;
-}
-li a{
-    font-size: 1rem;
-    text-decoration: none;
-    color: whitesmoke;
-
+    font-size: 16px;
 }
 .banner{
     width: 100%;
-    margin-top: 100px;
+    margin-top: 5rem;
+}
+#hamburger-icon{
+    margin: auto 0;
+    margin-right: 2rem;
+    display: none;
+    cursor: pointer;
+    right: 0;
+}
+#hamburger-icon div{
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+.open .bar1{
+    transform: rotate(-45deg) translate(-6px, -6px);
+    -webkit-transform: rotate(-45deg) translate(-6px, -6px);
+    -moz-transform: rotate(-45deg) translate(-6px, -6px);
+    -ms-transform: rotate(-45deg) translate(-6px, -6px);
+    -o-transform: rotate(-45deg) translate(-6px, -6px);
+}
+.open .bar2{
+    opacity: 0;
+}
+
+.open .bar3{
+    transform: rotate(45deg) translate(-6px, -8px);
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    -moz-transform: rotate(45deg) translate(-6px, -8px);
+    -ms-transform: rotate(45deg) translate(-6px, -8px);
+    -o-transform: rotate(45deg) translate(-6px, -8px);
+}
+.open .bar3-test{
+    transform: rotate(45deg) translate(-17px, -8px);
+    -webkit-transform: rotate(45deg) translate(-17px, -8px);
+    -moz-transform: rotate(45deg) translate(-17px, -8px);
+    -ms-transform: rotate(45deg) translate(-17px, -8px);
+    -o-transform: rotate(45deg) translate(-17px, -8px);
+}
+.open .mobile-menu{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    justify-content: flex-start;
+    background: #212121;
+}
+
+.mobile-menu{
+    display: none;
+    position: absolute;
+    top: 80px;
+    z-index: 10;
+    right: 0;
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-color:red;
+
+}
+.mobile-menu li{
+    padding: 2rem 0;
+    font-size: 1rem;
 }
 
 /* Projects */
@@ -152,51 +227,58 @@ hr{
     border-left: none;
     border-right: none;
 }
-.logo{
-    width: 8%;
-    float: left;
-    margin-top: 8px;
-}
-ul{
-    list-style: none;
-    display: flex;
-    font-family: "Inter", sans-serif;
-    font-weight: 100;
-    font-size: 6px;
-}
-
-li{
-    margin: 0 1rem;
-}
-footer{
-    margin-top: 0px;
-}
-
-.pages{
-    float: right;
-}
-.socials{
-    float: right;
-    display: flex;
-    margin-top: 16px;
-    margin-right: 16px;
-    width: 0px;
-}
-.linkedin,.instagram,.dribbble,.youtube{
-    width: 24px;
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-}
-.youtube-thumbnail{
-    width: 75%;
-    margin-left: 32px;
-    margin-bottom: 32px;
-}
 
 /* MEDIA QUERIES */
+
+@media screen and (min-width: 300px) and (max-width: 768px){
+    /*** NAVBAR ***/
+.desktop-nav{
+    display: none;
+}
+#hamburger-icon{
+    display: block;
+}
+/* FOOTER MIDSIZE */
+footer{
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+.logo{
+    width: 18%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+}
+.hidden{
+    display: none;
+}
+.pages{
+    font-family: Inter;
+   font-weight: 200;
+    display: flex;
+    margin-left: 2rem;
+    list-style: none;
+    margin-top: 8px;
+}
+.pages li{
+    margin-inline: 12px;
+}
+.socials-list{
+    display: flex;
+    margin-left: 2rem;
+    list-style: none;
+    margin-top: 1rem;
+}
+.socials-list li{
+    margin-inline: 8px;
+}
+.linkedin, .youtube, .dribbble, .instagram{
+    width: 32px;
+    height: 32px;
+}
+}
 @media screen and (min-width: 600px) and (max-width: 768px) {
     /* .cha-ching, .cryptocation, .instacare, .nft, .whiskey{
         margin-left: 32px;
@@ -240,50 +322,16 @@ hr{
     border-left: none;
     border-right: none;
 }
-
-ul{
-    list-style: none;
-    display: flex;
-    font-family: "Inter", sans-serif;
-    font-weight: 100;
-    font-size: 12px;
-}
-
-li{
-    margin: 0 1rem;
-    margin-top: 10px;
-}
-footer{
-    margin-top: 0px;
-}
-
-.pages{
-    float: right;
-}
-.socials{
-    float: right;
-    display: flex;
-    margin-top: 16px;
-    margin-right: 16px;
-    width: 0px;
-}
-.linkedin,.instagram,.dribbble,.youtube{
-    width: 32px;
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-}
-.youtube-thumbnail{
-    width: 50%;
-    margin-left: 32px;
-    margin-bottom: 32px;
-}
 }
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 769px){
+    .logo{
+        width: 35%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 1.5rem;
+    }
     h3{
         font-size: 40px;
         font-weight: 800;
@@ -333,6 +381,27 @@ footer{
             margin-bottom: 32px;
             margin-top: 80px;
         }
+
+
+        /*** NAVBAR ***/
+#hamburger-icon{
+    display: none;
+}
+.desktop-nav{
+    display: flex;
+    margin-top: 2rem;
+    margin-right: 4rem;
+}
+.desktop-nav li{
+    margin-inline: 1rem;
+    font-size: 1.5rem;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
 
 
 

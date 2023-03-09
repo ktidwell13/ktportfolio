@@ -7,11 +7,17 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+    width: 1px;
+  }
+  
+
 body{
     background-color: #212121;
     height: 100;
     width: 100%;
 }
+
 /* Fonts Mobile*/
 h1{
     font-size: 40px;
@@ -113,6 +119,15 @@ a{
 }
 a:hover{
     border-bottom: 1px solid white;
+}
+.no-link:hover{
+    border-bottom: none;
+  }
+
+
+/* LIST STYLES */
+ul{
+    list-style: none;
 }
 /* NavBar */
 header{
@@ -302,7 +317,7 @@ button{
 
 
 /* MEDIA QUERIES */
-@media screen and (min-width: 425px) and (max-width: 768px) {
+@media screen and (min-width: 300px) and (max-width: 768px) {
     h1{
         font-size: 60px;
     }
@@ -327,6 +342,13 @@ h4{
 .skills{
     font-size: 48px;
 }
+/* LOGO */
+.logo{
+    width: 18%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+}
 
 /*** NAVBAR ***/
 .desktop-nav{
@@ -337,27 +359,11 @@ h4{
 }
 
 /* Skills MidSize */
-.figma{
-    width: 20%;
-    margin-left: 32px;
-    margin-right: 16px;
-    margin-top: 24px;
-}
-.adobexd{
-    width: 20%;
-    margin-right: 16px;
-    margin-top: 24px;
-}
-.css{
-    width: 20%;
-    margin-right: 16px;
-    margin-left: 0px;
-    margin-top: 24px;
-}
+.figma,
+.adobexd,
+.css,
 .blender{
-    width: 20%;
-    margin-left: 0px;
-    margin-top: 32px;
+    width: 100%;
 }
 .action{
     font-size: 26px;
@@ -375,6 +381,15 @@ h4{
 display: flex;
 }
 
+/* *** SKILLS GRID *** */
+.skills-grid{
+    display:grid;
+    
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+}
 /* FOOTER MIDSIZE */
 footer{
     margin-top: 32px;
@@ -382,12 +397,7 @@ footer{
     flex-direction: column;
     padding-bottom: 1rem;
 }
-.logo{
-    width: 75px;
-    height: 75px;
-    margin-bottom: 1rem;
-    margin-left: 1.5rem;
-}
+
 .hidden{
     display: none;
 }
@@ -420,8 +430,10 @@ footer{
 /* MEDIA QUERIES */
 @media screen and (min-width: 768px){
     .logo{
-        width: 9%;
-        float: left;
+        width: 35%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 1.5rem;
     }
     h1{
         font-size: 60px;
@@ -432,7 +444,7 @@ footer{
     }
 p{
     width: 50%;
-    font-size: 12px;
+    font-size: 16px;
     margin-top: 40px;
 }
 h2{
@@ -449,7 +461,7 @@ h4{
     font-size: px;
 }
 .description{
-    font-size: 16px;;
+    font-size: 16px;
     width: 80%;
     margin-top: 20px;
     color: rgb(202, 202, 202);
@@ -548,11 +560,6 @@ display: flex;
 }
 .hidden{
     display: block;
-}
-.reverse{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
 }
 .social-footer-links{
     display: flex;
