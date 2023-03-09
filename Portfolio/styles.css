@@ -359,27 +359,11 @@ h4{
 }
 
 /* Skills MidSize */
-.figma{
-    width: 20%;
-    margin-left: 32px;
-    margin-right: 16px;
-    margin-top: 24px;
-}
-.adobexd{
-    width: 20%;
-    margin-right: 16px;
-    margin-top: 24px;
-}
-.css{
-    width: 20%;
-    margin-right: 16px;
-    margin-left: 0px;
-    margin-top: 24px;
-}
+.figma,
+.adobexd,
+.css,
 .blender{
-    width: 20%;
-    margin-left: 0px;
-    margin-top: 32px;
+    width: 100%;
 }
 .action{
     font-size: 26px;
@@ -397,6 +381,15 @@ h4{
 display: flex;
 }
 
+/* *** SKILLS GRID *** */
+.skills-grid{
+    display:grid;
+    
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+}
 /* FOOTER MIDSIZE */
 footer{
     margin-top: 32px;
